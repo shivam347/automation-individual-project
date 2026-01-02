@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="ui_and_login_suite" verbose="1">
+  <test name="ui_validation">
+    <classes>
+      <class name="ui.UiLoginTest"/>
+   </classes>
+ </test>
+
+ <test name="login_validation">
+    <classes>
+      <class name="tests.LoginTest"/>
+   </classes>
+ </test>
+
+</suite>

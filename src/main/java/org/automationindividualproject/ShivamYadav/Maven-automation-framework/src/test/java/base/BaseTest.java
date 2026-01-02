@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -19,7 +20,7 @@ public class BaseTest {
      * Shared WebDriver instance for tests. Initialized in {@link #setUp()} and
      * closed in {@link #tearDown()}.
      */
-    protected WebDriver driver; 
+    protected static WebDriver driver; 
 
     /**
      * Initialize the WebDriver (Chrome), set timeouts, maximize window,
@@ -43,6 +44,11 @@ public class BaseTest {
     @AfterMethod
     public void tearDown(){
         driver.quit();
+    }
+
+    public void onSuccess(ITestResult result) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'onSuccess'");
     }
 
 }
